@@ -1,0 +1,16 @@
+body {
+    background-image: linear-gradient(to right, rgb(180, 126, 252), rgb(250, 141, 201));
+    font-family: 'Montserrat', sans-serif;
+}
+
+div {
+    padding:0.4rem;
+    background-color:white;
+    opacity: 0.9;
+    border-radius: 1.3rem;
+}
+
+.gem {
+    width: 6rem;
+    height: 6rem;
+}
