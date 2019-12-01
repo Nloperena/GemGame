@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="assets/css/style.css"> <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src='assets/game.js'></script>
-
 </head>
 
 <body>
@@ -27,14 +23,14 @@
         <div class='row center-align'>
             <ul>
                 <li>
-                    <h6 class='center-align'>Your goal is to get your points to match the score</h6>
+                    <h6 class='center-align' id ='score'>Your goal is to get your points to match the score</h6>
                 </li>
                 <li>
-                    <h6 class='center-align'>Each gem holds a different number. Select one to ADD to your points.
+                    <h6 class='center-align' id = 'points'>Each gem holds a different number. Select one to ADD to your points.
                     </h6>
                 </li>
                 <li>
-                    <h6 class='center-align'>If you match your points to the score, you win.</h6>
+                    <h6 class='center-align' id = ''>If you match your points to the score, you win.</h6>
                 </li>
                 <li>
                     <h6 class='center-align'>If you match your points exceed the score, you lose</h6>
@@ -49,14 +45,15 @@
 
     <div class='container'>
         <div class="row">
-            <div class="col s6 center-align"><img class = 'gem' src = 'assets/images/greenRupee.png'></div>
-            <div class="col s6 center-align"><img class = 'gem' src = 'assets/images/silverRupee.png'></div>
+            <div class="col s6 center-align"><img id='gem1' class = 'gem' src = 'assets/images/greenRupee.png'></div>
+            <div class="col s6 center-align"><img id ='gem2' class = 'gem' src = 'assets/images/silverRupee.png'></div>
         </div>
         <div class="row">
-            <div class="col s6 center-align"><img class = 'gem' src = 'assets/images/violetRupee.png'></div>
-            <div class="col s6 center-align"><img class = 'gem' src = 'assets/images/blueRupee.png' ></div>
+            <div class="col s6 center-align"><img id='gem3' class = 'gem' src = 'assets/images/violetRupee.png'></div>
+            <div class="col s6 center-align"><img id='gem4' class = 'gem' src = 'assets/images/blueRupee.png' ></div>
         </div>
     </div>
 </body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src = 'assets/game.js'></script>
 </html>
