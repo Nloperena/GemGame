@@ -23,50 +23,6 @@ var gems = {
     }
 
 }
-//testing values and logging them
-console.log("score: " + score);
-console.log("blue: " + gems.blue.value);
-console.log("silver: " + gems.silver.value);
-console.log("violet: " + gems.violet.value);
-console.log("green: " + gems.green.value);
-console.log("points: " + points);
-
-
-
-function startGame() {
-    //resets points to 0 
-    points = 0;
-    //getValue function is called to pick a number between 50 and 100
-    //and assigns the value to score. 
-    score = getValue(50, 100);
-    // sets each value of the gem to a random number
-    gems.blue.value = getValue(1, 2);
-    gems.silver.value = getValue(3, 6);
-    gems.green.value = getValue(7, 10);
-    gems.violet.value = getValue(11, 20);
-    // takes you to the game by switching out the HTML on the page
-    $('#score').text('score: ' + score);
-    $('#points').text('Your points: ' + points);
-    $('#wins').text('Wins: ' + wins)
-    $('#loses').text('Loses: ' + loses)
-    $('#start-game').text('Reset Game')
-    $('#how-to').remove();
-
-
-    console.log("score: " + score);
-    console.log("blue: " + gems.blue.value);
-    console.log("silver: " + gems.silver.value);
-    console.log("violet: " + gems.violet.value);
-    console.log("green: " + gems.green.value);
-    console.log("points: " + points);
-}
-
-
-
-
-
-
-
 
 //Declaring my functions to be used in the startGame function.
 //==================================================================
@@ -75,11 +31,36 @@ function getValue(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 //------------------------------------------------------
+function startGame() {
+    // takes you to the game by switching out the HTML on the page
+    $('#score').text('score: ' + score);
+    $('#points').text('Your points: ' + points);
+    $('#wins').text('Wins: ' + wins)
+    $('#loses').text('Loses: ' + loses)
+    $('#start-game').text('Reset Game')
+    $('#how-to').remove();  
+  //resets points to 0 
+  points = 0;
+  //getValue function is called to pick a number between 50 and 100
+  //and assigns the value to score. 
+  score = getValue(50, 100);
+  // sets each value of the gem to a random number
+  gems.blue.value = getValue(1, 4);
+  gems.silver.value = getValue(3, 6);
+  gems.green.value = getValue(7, 10);
+  gems.violet.value = getValue(11, 20);
+  console.log(gems.blue)
+  console.log(gems.silver)
+  console.log(gems.green)
+  console.log(gems.violet)
+
+}
+
 
 // checks to see if you win or lose
 function winOrLose() {
     if (score === points) {
-        $('points').text('You win! score: ' + score);
+        $('#points').text('You win! score: ' + score);
         alert('You win!');
         wins++
     } else if (score < points) {
@@ -98,29 +79,32 @@ function addPoints(gemClick) {
     $('#points').text(points)
     //runs the function to check if you win or lose
     winOrLose();
-    console.log(points);
+    console.log('your score: ' + points);
 }
 //-------------------------------------------------------
 
-$('#start-game').click(function () {
-    startGame();
-});
 
+//Calling my functions
+// $('#start-game').click(function () {
+//     startGame();
+// });
+
+startGame();
 $('#gem1').click(function () {
     addPoints(gems.blue);
     console.log(gems.blue);
 })
 $('#gem2').click(function () {
-    addPoints(gems.blue);
-    console.log(gems.blue);
+    addPoints(gems.silver);
+    console.log(gems.silver);
 })
 $('#gem3').click(function () {
-    addPoints(gems.blue);
-    console.log(gems.blue);
+    addPoints(gems.green);
+    console.log(gems.green);
 })
 $('#gem4').click(function () {
-    addPoints(gems.blue);
-    console.log(gems.blue);
+    addPoints(gems.violet);
+    console.log(gems.violet);
 })
 
 //mimikats
